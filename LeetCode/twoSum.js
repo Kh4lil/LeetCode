@@ -17,11 +17,14 @@ return [0, 1].
  * @return {number[]}
  */
 var twoSum = function (nums, target) {
+    var array = [];
     for (i = 0; i <= nums.length; i++) {
-        var array = [];
-        if (nums[i] + nums[i + 1] == target) {
-            array.push(i);
-            array.push(i + 1);
-        } return array
+        for (y = 1; y <= nums.length; y++) {
+            if (nums[i] + nums[i + y] == target) {
+                array.push(i);
+                array.push(i + y);
+                return array;
+            }
+        }
     }
 };
